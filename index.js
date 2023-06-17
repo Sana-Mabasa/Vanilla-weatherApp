@@ -36,10 +36,16 @@ function displayTemp(response) {
   humidity.innerHTML = Math.round(response.data.main.humidity);
   let dateElement = document.querySelector("#day");
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
+  let iconElement = document.querySelector("#icon");
+  let icon = response.data.weather[0].icon;
+  iconElement.setAttribute(
+    "src",
+    `https://openweathermap.org/img/wn/${icon}@2x.png`
+  );
 }
 
 let apiKey = `866a208a73eeff02182218e9441647a1`;
-let city = `Pretoria`;
+let city = `London`;
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
 axios.get(apiUrl).then(displayTemp);
