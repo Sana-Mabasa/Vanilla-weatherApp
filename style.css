@@ -17,3 +17,17 @@ h1 {
   border: 1px solid aqua;
   border-radius: 10px;
 }
+
+.weather-forecast {
+  margin-top: 15px;
+  text-align: center;
+}
+#temp {
+  font-size: 50px;
+}
+.forecast-date {
+  opacity: 0.6;
+}
+.min-temp {
+  opacity: 0.6;
+}
