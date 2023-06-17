@@ -1,21 +1,33 @@
 body {
   font-family: Georgia, "Times New Roman", Times, serif;
 }
+ul {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 15px;
+}
 li {
-  font-size: 15px;
+  font-size: 20px;
+  list-style: none;
 }
 h1 {
   line-height: 25px;
-  margin-bottom: 25px;
+  margin-bottom: 0;
   text-align: left;
   font-size: 30px;
 }
-.container {
+.weather-app-wrapper {
   max-width: 650px;
   margin: 50px auto;
+}
+.weather-app {
   padding: 20px;
   border: 1px solid aqua;
   border-radius: 10px;
+}
+
+.weather-temperature img {
+  margin-right: 10px;
 }
 
 .weather-forecast {
@@ -23,7 +35,7 @@ h1 {
   text-align: center;
 }
 #temp {
-  font-size: 50px;
+  font-size: 36px;
 }
 .forecast-date {
   opacity: 0.6;
