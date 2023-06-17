@@ -9,6 +9,7 @@ ul {
 li {
   font-size: 20px;
   list-style: none;
+  text-transform: capitalize;
 }
 h1 {
   line-height: 25px;
@@ -34,9 +35,7 @@ h1 {
   margin-top: 15px;
   text-align: center;
 }
-#temp {
-  font-size: 36px;
-}
+
 .forecast-date {
   opacity: 0.6;
 }
