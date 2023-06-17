@@ -1,10 +1,19 @@
-li {
-  font-size: 19px;
+body {
   font-family: Georgia, "Times New Roman", Times, serif;
 }
+li {
+  font-size: 15px;
+}
 h1 {
-  font-family: Georgia, "Times New Roman", Times, serif;
   line-height: 25px;
-  margin-top: 40px;
   margin-bottom: 25px;
+  text-align: left;
+  font-size: 30px;
+}
+.container {
+  max-width: 650px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid aqua;
+  border-radius: 10px;
 }
