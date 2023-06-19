@@ -27,7 +27,10 @@ function displayTemp(response) {
   let temperatureElement = document.querySelector("#temp");
   let city = document.querySelector("#city");
   city.innerHTML = response.data.name;
-  temperatureElement.innerHTML = Math.round(response.data.main.temp);
+
+  celsiusTemperature = response.data.main.temp;
+
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
   let description = document.querySelector("#discription");
   description.innerHTML = response.data.weather[0].description;
   let wind = document.querySelector("#wind");
@@ -56,7 +59,25 @@ function handleSubmit(event) {
   search(cityInput.value);
   console.log(cityInput.value);
 }
+function showfahrenheitTemp(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temp");
+  let fahrenheitTemp = (celsiusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemp);
+}
+function showcelsiusTemp(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temp");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
+let celsiusTemperature = null;
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
+
+let fahrenheit = document.querySelector("#fahrenheit");
+fahrenheit.addEventListener("click", showfahrenheitTemp);
+
+let celsius = document.querySelector("#celsius");
+celsius.addEventListener("click", showcelsiusTemp);
 search("Pretoria");
