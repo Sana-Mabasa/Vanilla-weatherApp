@@ -31,14 +31,15 @@ h1 {
   margin-right: 10px;
 }
 
-.weather-forecast {
+.weather-forecast-date {
   margin-top: 15px;
   text-align: center;
+  font-size: 15px;
 }
 
-.forecast-date {
-  opacity: 0.6;
+.weather-temperature {
+  font-size: 10px;
 }
 .min-temp {
-  opacity: 0.6;
+  font-size: 15px;
 }
