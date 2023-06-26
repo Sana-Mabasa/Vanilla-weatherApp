@@ -23,7 +23,8 @@ function formatDate(timestamp) {
   return `${day} ${hours}:${minutes}`;
 }
 
-function displayForecast() {
+function displayForecast(response) {
+  console.log(response.data.daily);
   let forecastElement = document.querySelector("#weather-forecast");
   let forecastHTML = `<div class="row">`;
   let days = ["Wed", "Thu", "Fri", "Sat", "Sun"];
@@ -49,6 +50,13 @@ function displayForecast() {
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
 }
+function getForecast(coordinates) {
+  console.log(coordinates);
+  let apiKey = `866a208a73eeff02182218e9441647a1`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  console.log(apiUrl);
+  axios.get(apiUrl).then(displayForecast);
+}
 
 function displayTemp(response) {
   let temperatureElement = document.querySelector("#temp");
@@ -72,7 +80,10 @@ function displayTemp(response) {
     "src",
     `https://openweathermap.org/img/wn/${icon}@2x.png`
   );
+
+  getForecast(response.data.coord);
 }
+
 function search(city) {
   let apiKey = `866a208a73eeff02182218e9441647a1`;
 
@@ -108,4 +119,3 @@ fahrenheit.addEventListener("click", showfahrenheitTemp);
 let celsius = document.querySelector("#celsius");
 celsius.addEventListener("click", showcelsiusTemp);
 search("Pretoria");
-displayForecast();
