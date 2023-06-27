@@ -1,6 +1,8 @@
 body {
   font-family: Georgia, "Times New Roman", Times, serif;
 }
+.container {
+}
 ul {
   margin: 0;
   padding: 0;
@@ -17,6 +19,12 @@ h1 {
   text-align: left;
   font-size: 30px;
 }
+#button {
+  background-color: aqua;
+  border-radius: 15px;
+  margin-top: 10px;
+  border: 1px solid aqua;
+}
 .weather-app-wrapper {
   max-width: 650px;
   margin: 50px auto;
@@ -25,6 +33,8 @@ h1 {
   padding: 20px;
   border: 1px solid aqua;
   border-radius: 10px;
+  background-image: url(clouds.jpg);
+  background-size: 100%;
 }
 
 .weather-temperature img {
