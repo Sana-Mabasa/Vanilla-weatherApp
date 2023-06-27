@@ -33,8 +33,8 @@ h1 {
   padding: 20px;
   border: 1px solid aqua;
   border-radius: 10px;
-  background-image: url(clouds.jpg);
-  background-size: 100%;
+  background-image: url(sky.jpg);
+  background-size: cover;
 }
 
 .weather-temperature img {
@@ -44,7 +44,7 @@ h1 {
 .weather-forecast-date {
   margin-top: 15px;
   text-align: center;
-  font-size: 15px;
+  font-size: 30px;
 }
 
 .weather-temperature {
@@ -52,4 +52,12 @@ h1 {
 }
 .min-temp {
   font-size: 15px;
+}
+#temp {
+  font-size: 50px;
+}
+,
+.weather-forecast-temp {
+  font-size: 20px;
+  font-weight: bold;
 }
